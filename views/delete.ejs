@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta http-equiv="content-type"
+            content="text/html"; charset="UTF8">
+        <title><%= title %></title>
+        <link rel="stylesheet" href="/stylesheets/style.css" />
+    </head>
+    <body>
+        <h1><head><%= title %></head></h1>
+        <div role="main">
+            <p><%= content %></p>
+            <form method="POST" action="/delete">
+            <table>
+                <tr>
+                    <th>文書ID</th>
+                    <td><input type="text" name="id"></td>
+                </tr>                
+            </table>
+            <p><input type="submit" value="削除"></p>
+            </form>
+        </div>
+
+        <span><a href="/">トップページ</a></span>
+    </body>
+</html>

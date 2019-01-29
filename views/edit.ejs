@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta http-equiv="content-type"
+            content="text/html"; charset="UTF8">
+        <title><%= title %></title>
+        <link rel="stylesheet" href="/stylesheets/style.css" />
+    </head>
+    <body>
+        <h1><head><%= content %></head></h1>
+        <% if(keyword != "") {%>
+        <div role="main">
+            <form method="POST" action="/edit/?id=<%= keyword._id%>">
+                <%- include('edit_data', { keyword:keyword, edit:edit })%>
+                <% if(edit){%>
+                    <p><input type="submit" value="編集"></p>
+                <% }%>
+            </form>
+        </div>
+        <% } %>
+        <span><a href="/">トップページ</a></span>
+    </body>
+</html>

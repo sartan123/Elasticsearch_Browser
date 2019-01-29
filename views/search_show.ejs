@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta http-equiv="content-type"
+            content="text/html"; charset="UTF8">
+        <title><%= title %></title>
+        <link rel="stylesheet" href="/stylesheets/style.css" />
+    </head>
+    <body>
+        <h1><head><%= title %></head></h1>
+        <p><%= keyword.length %>件、Hitしました。</p>
+        <div role="main">
+            <% for(var i in keyword ) { %>
+                <table>
+                <tr>
+                    <th>文書ID</th>
+                    <td><%= keyword[i]._id %></td>
+                </tr>
+                <tr>
+                    <th>作成者</th>
+                    <td><%= keyword[i]._source.author %></td>
+                </tr>
+                <tr>
+                    <th>タイトル</th>
+                    <td><%= keyword[i]._source.title %></td>
+                </tr>
+                <tr>
+                    <th>内容</th>
+                    <td><%= keyword[i]._source.content %></td>
+                </tr>
+                <tr>
+                    <th>作成日</th>
+                    <td><%= keyword[i]._source.create_date %></td>
+                </tr>
+                <tr>
+                    <th>最終更新日</th>
+                    <td><%= keyword[i]._source.last_update %></td>
+                </tr>
+                <tr>
+                    <th>編集</th>
+                    <td><a href="/edit/?id=<%= keyword[i]._id %>">編集</a></td>
+                </tr>
+                </table>
+            <% } %>
+        </div>
+        <span><a href="/">トップページ</a></span>
+    </body>
+</html>
