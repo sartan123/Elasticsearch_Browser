@@ -10,7 +10,7 @@
     <tr>
         <th>タイトル</th>
         <% if(edit == true) {%>
-        <td><input type="text" name="title" value="<%= keyword._source.title %>"></td>
+        <td><input type="text" name="title" class="title_edit" value="<%= keyword._source.title %>"></td>
         <% }else{%>
         <td><%= keyword._source.title %></td>
         <% }%>
@@ -18,9 +18,9 @@
     <tr>
         <th>内容</th>
         <% if(edit == true) {%>
-        <td><input type="text" name="content" value="<%= keyword._source.content %>"></td>
+        <td><textarea type="text" name="content" class="content_edit" value="<%= keyword._source.content %>"></textarea></td>
         <% }else{%>
-        <td><%= keyword._source.content %></td>
+        <td><textarea readonly type="text" class="content_show"><%= keyword._source.content %></textarea></td>
         <% }%>
     </tr>
     <tr>

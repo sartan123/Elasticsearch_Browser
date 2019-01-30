@@ -28,3 +28,16 @@ table tr td{
   text-align: left;
   padding: 3px 10px;
 }
+
+textarea.content_edit{
+  width:400px;
+  height:200px;
+}
+textarea.content_show{
+  width:400px;
+  height:200px;
+}
+
+input.title_edit{
+  width:400px;
+}

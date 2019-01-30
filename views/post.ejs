@@ -11,15 +11,8 @@
         <div role="main">
             <p><%= content %></p>
             <form method="POST" action="/post">
-            <table>
-                <% for(key in keyword) { %>
-                <tr>
-                    <th><%= key %></th>
-                    <td><input type="text" name="<%= key %>" ></td>
-                </tr>                
-                <% } %>
-            </table>
-            <p><input type="submit" value="追加"></p>
+                <%- include('post_data', { keyword:keyword }) %>
+                <p><input type="submit" value="追加"></p>
             </form>
         </div>
         <span><a href="/">トップページ</a></span>
